@@ -238,7 +238,7 @@ public class QuickCraft implements ClientModInitializer {
 			ClientPlayerEntity player = client.player;
 			ScreenHandler handler = screen.getScreenHandler();
 
-			if (handler instanceof PlayerScreenHandler) {
+			if (handler instanceof CraftingScreenHandler) {
 				if (player == null || player.currentScreenHandler == null) return;
 				ClientPlayNetworkHandler net = MinecraftClient.getInstance().getNetworkHandler();
 				if (net == null) return;
@@ -334,11 +334,7 @@ public class QuickCraft implements ClientModInitializer {
 				}
 
 				player.playSound(SoundEvents.UI_BUTTON_CLICK.value(), 1.0f, 1.0f);
-			} else if (handler instanceof CraftingScreenHandler) {
-
-				
-
-
+			} else if (handler instanceof PlayerScreenHandler) {
 				if (player == null || player.currentScreenHandler == null) return;
 				ClientPlayNetworkHandler net = MinecraftClient.getInstance().getNetworkHandler();
 				if (net == null) return;
