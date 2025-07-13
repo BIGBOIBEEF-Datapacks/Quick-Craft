@@ -338,7 +338,6 @@ public class QuickCraft implements ClientModInitializer {
 				if (player == null || player.currentScreenHandler == null) return;
 				ClientPlayNetworkHandler net = MinecraftClient.getInstance().getNetworkHandler();
 				if (net == null) return;
-
 				int syncId = handler.syncId;
 
 				for (int slotIndex = 1; slotIndex <= 4; slotIndex++) {
